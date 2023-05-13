@@ -17,10 +17,28 @@ namespace AdivinaPalabras
             InitializeComponent();
         }
 
-        List<ModeloPalabra> listaDePalabras = new List<ModeloPalabra>(); 
-        
+        // List<ModeloPalabra> listaDePalabras = new List<ModeloPalabra>(); 
+        // string[] palabras = { "como", "bro", "amr", "bebe", "buenos" };
 
-        string[] palabras = { "como", "bro", "amr", "bebe", "buenos" };
+        ModeloPalabra[] formales = {
+            new ModeloPalabra("como", 0.9),
+            new ModeloPalabra("bro", 0.7),
+            new ModeloPalabra("amr", 0.5),
+            new ModeloPalabra("babe", 0.2),
+            new ModeloPalabra("buenos", 0.1)
+        };
+        ModeloPalabra[] informales = {
+            new ModeloPalabra("che", 0.9),
+            new ModeloPalabra("prro", 0.7),
+            new ModeloPalabra("estimado", 0.5),
+            new ModeloPalabra("hermano", 0.2),
+            new ModeloPalabra("loco", 0.1)
+        };
+        ModeloPalabra[] casual = {
+            new ModeloPalabra("brow", 0.9),
+            new ModeloPalabra("inge", 0.5),
+            new ModeloPalabra("chaval", 0.1),
+        };
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -41,25 +59,26 @@ namespace AdivinaPalabras
             string seccion = "";
             string palabra_encontrada = "";
 
-            foreach (var item in listaDePalabras)
+            foreach (var item in formales)
             {
                 
                 for (int i = 0; i < item.palabra.Length; i++)
                 {
-                    if (i < 2)
+                    if (i > 1)
                     {
                         seccion += item.palabra[i];
-                    }
-                    else if (i >= 2)
-                    {
-                        break;
+                        if (seccion == textBox6.Text)
+                        {
+                            palabra_encontrada = item.palabra;
+                            break;
+                        }
+                        if (seccion == )
+                        {
+
+                        }
                     }
                 }
-                if (seccion == textBox6.Text)
-                {
-                    palabra_encontrada = item.palabra;
-                    break;
-                }
+                
             }
 
             return palabra_encontrada;
@@ -68,21 +87,16 @@ namespace AdivinaPalabras
         {
             for (int i = 0; i <= listaDePalabras.Count(); i++)
             {
-                textBox1.Text = palabras[0];
-                textBox2.Text = palabras[1];
-                textBox3.Text = palabras[2];
-                textBox4.Text = palabras[3];
-                textBox5.Text = palabras[4];
+                textBox1.Text = arreglo[0].palabra;
+                textBox2.Text = arreglo[1].palabra;
+                textBox3.Text = arreglo[2].palabra;
+                textBox4.Text = arreglo[3].palabra;
+                textBox5.Text = arreglo[4].palabra;
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            listaDePalabras.Add(new ModeloPalabra("como", 0.9));
-            listaDePalabras.Add(new ModeloPalabra("bro", 0.7));
-            listaDePalabras.Add(new ModeloPalabra("amr", 0.5));
-            listaDePalabras.Add(new ModeloPalabra("babe", 0.2));
-            listaDePalabras.Add(new ModeloPalabra("buenos", 0.1));
             actualiza();
         }
 
