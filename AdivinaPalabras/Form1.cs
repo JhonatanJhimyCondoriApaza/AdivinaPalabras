@@ -42,56 +42,54 @@ namespace AdivinaPalabras
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar.ToString() == " "){
-
-                string valor = adivinar();
+            if (textBox6.Text.Length>5)
+            {
+                string valor = adivinarformales();
                 string anterior = textBox6.Text;
-                if (valor!="" || valor!=" ")
+                if (valor != "" || valor != " ")
                 {
-                    textBox6.Text = anterior + " " + valor;
+                    label2.Text = anterior + " " + valor;
                 }
-
             }
+
         }
-        private string adivinar() 
+        private string adivinarformales() 
         {
 
             string seccion = "";
             string palabra_encontrada = "";
-
+            string[] palabras_input = { };
             foreach (var item in formales)
             {
                 
                 for (int i = 0; i < item.palabra.Length; i++)
                 {
+                    seccion += item.palabra[i];
                     if (i > 1)
                     {
-                        seccion += item.palabra[i];
-                        if (seccion == textBox6.Text)
+                        palabras_input = textBox6.Text.Split(" ");
+
+                        if (seccion == palabras_input)
                         {
                             palabra_encontrada = item.palabra;
                             break;
                         }
-                        if (seccion == )
-                        {
-
-                        }
                     }
                 }
-                
+
             }
 
             return palabra_encontrada;
         }
         private void actualiza() 
         {
-            for (int i = 0; i <= listaDePalabras.Count(); i++)
+            for (int i = 0; i <= formales.Length; i++)
             {
-                textBox1.Text = arreglo[0].palabra;
-                textBox2.Text = arreglo[1].palabra;
-                textBox3.Text = arreglo[2].palabra;
-                textBox4.Text = arreglo[3].palabra;
-                textBox5.Text = arreglo[4].palabra;
+                textBox1.Text = formales[0].palabra;
+                textBox2.Text = formales[1].palabra;
+                textBox3.Text = formales[2].palabra;
+                textBox4.Text = formales[3].palabra;
+                textBox5.Text = formales[4].palabra;
             }
         }
 
