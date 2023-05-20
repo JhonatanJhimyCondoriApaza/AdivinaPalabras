@@ -42,41 +42,36 @@ namespace AdivinaPalabras
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (textBox6.Text.Length>5)
+            if (textBox6.Text.Length > 5)
             {
                 string valor = adivinarformales();
+
                 string anterior = textBox6.Text;
+
                 if (valor != "" || valor != " ")
                 {
-                    label2.Text = anterior + " " + valor;
+                    label2.Text = valor;
+                    anterior = "";
                 }
             }
 
         }
         private string adivinarformales() 
         {
-
-            string seccion = "";
+            
             string palabra_encontrada = "";
             string[] palabras_input = { };
+            
             foreach (var item in formales)
             {
-                
-                for (int i = 0; i < item.palabra.Length; i++)
+                palabras_input = textBox6.Text.Split(' ');
+
+                if(item.palabra.ToString().Contains(palabras_input[1]))
                 {
-                    seccion += item.palabra[i];
-                    if (i > 1)
-                    {
-                        palabras_input = textBox6.Text.Split(" ");
-
-                        if (seccion == palabras_input)
-                        {
-                            palabra_encontrada = item.palabra;
-                            break;
-                        }
-                    }
+                    palabra_encontrada = item.palabra;
+                    Console.WriteLine("VALOR -> " + palabra_encontrada);
+                    break;
                 }
-
             }
 
             return palabra_encontrada;

@@ -1,10 +1,10 @@
 C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\bin\Debug\AdivinaPalabras.exe.config
 C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\bin\Debug\AdivinaPalabras.exe
 C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\bin\Debug\AdivinaPalabras.pdb
-C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\obj\Debug\AdivinaPalabras.csproj.AssemblyReference.cache
 C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\obj\Debug\AdivinaPalabras.Form1.resources
 C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\obj\Debug\AdivinaPalabras.Properties.Resources.resources
 C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\obj\Debug\AdivinaPalabras.csproj.GenerateResource.cache
 C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\obj\Debug\AdivinaPalabras.csproj.CoreCompileInputs.cache
 C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\obj\Debug\AdivinaPalabras.exe
 C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\obj\Debug\AdivinaPalabras.pdb
+C:\Users\Alumno\source\repos\AdivinaPalabras\AdivinaPalabras\obj\Debug\AdivinaPalabras.csproj.AssemblyReference.cache
